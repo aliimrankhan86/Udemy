@@ -1,0 +1,36 @@
+$font-stack: Halventica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+/* Only the multi line comments are visible in generate css file
+not single line comment */
+
+// this single line comment will not be shown in generated css file
+
+
+/* Data types of variables */
+
+// null
+$i-am-null: null;
+
+// booleans
+$i-am-true: true;
+$i-am-false: false;
+
+// number
+$a-number: 7;
+
+// strings
+$name: 'Ali Imran Khan';
+$name-together: 'Ali Imran' + 'Khan';
+
+// color
+$color: lighten(white, 15%);
+$venus: #998099;
+
+
+/* Arithmetic Operators */

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javscript recent Practices</title>
+    </head>
+    <body>
+        <p id=""></p>
+        
+        <script type="text/javascript">
+            
+            var age = prompt('What is your age?');
+            age = parseInt(age);
+            console.log(age);
+            
+            if (age !== parseInt(age)) {
+                console.log('Please enter a number');
+                //return;
+            }
+            
+            age = (age < 18) ? "You are too young" : "Please vote";
+            console.log(age);
+            
+            
+        </script>
+        
+    </body>
+</html>

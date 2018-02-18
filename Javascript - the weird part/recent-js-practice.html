@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javscript recent Practices</title>
+    </head>
+    <body>
+        <p id=""></p>
+        
+        <script type="text/javascript">
+            
+            var myObj = {   
+                daughter: function(fname, lname) {
+                   console.log(fname + ' ' +lname);
+                },
+                extra: function() {
+                    console.log(this.daughter('Aizah', 'Khan'));
+                }
+            }
+            
+            var myArg = [
+                1,
+                false,
+                function (fname, lname) {
+                    //console.log(fname + lname);
+                },
+                function() {
+                    console.log(arguments);
+                    if (arguments === 0) {
+                        console.log('No Arguments were passed');   
+                    }
+                    
+                    //console.log('wife name is ')
+                }
+            ]
+
+            myArg[2](myObj.daughter('Anaya', 'Khan'));
+            
+            myObj.extra(); // this refers to myObj not windows
+            
+            myArg[3]();
+            
+
+        </script>
+        
+    </body>
+</html>

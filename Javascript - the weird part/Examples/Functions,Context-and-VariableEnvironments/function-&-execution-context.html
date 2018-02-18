@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<title>Functions, context & Execution Context</title>    
+</head>
+<body>
+    <h1>Functions, context & Execution Context</h1>
+    
+    
+    <script type="text/javascript">
+        
+        function c() {
+            console.log('Function c Execution context myVar Value is ' + myVar);
+            /* In this function execution context myVar isn't present thus it will refer to global execution context.
+            This is called "The Scope Chain" */
+        }
+        
+        function b() {
+            var myVar;
+            console.log('Function B Execution context myVar Value is ' + myVar);
+            c();
+        }
+        
+        function a() {
+            var myVar = 2;
+            console.log('Function A Execution context myVar Value is ' + myVar);
+            b();
+        }
+        
+        var myVar = 1;
+        console.log('Global Execution context myVar Value is ' + myVar);
+        a();
+        
+        /* The above example shows the each function has its own execution context and it's variable environment */
+        
+        /* 1 - Global Execution Context 
+           2 - We invoked function a();
+           3 - function a() execution stack will be created, it will set its own myVar value inside its context
+           4 - now function b() will be invoked, it will set its own myVar value inside tts context 
+           5- Function c() will invoke and var myVar is not defined in its scope so it will refer to global variable
+           or the value in global execution context */
+           
+    
+    </script>
+    
+</body>
+</html>
